@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,13 +16,13 @@ public class Blog {
 	@Id
 	@Column(name="BLOGID")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_blog")
-	@SequenceGenerator(name = "seq_blog", sequenceName = "seq_blog",allocationSize=1, initialValue=1)
+	@SequenceGenerator(name = "seq_blog", sequenceName = "seq_blog", allocationSize = 1, initialValue = 1)
 	private int blogId;
 	@Column(name="BLOGTITLE")
 	private String blogTitle;
-	@Column(name="BLOGDECERIPTION")
+	@Column(name="BLOGDESCRIPTION")
 	private String blogDescription;
-	@Column(name="BLOGPOSTEDON")
+	@Column(name="POSTEDON")
 	private LocalDate postedOn;
 	
 	public int getBlogId() {
@@ -48,5 +49,5 @@ public class Blog {
 	public void setPostedOn(LocalDate postedOn) {
 		this.postedOn = postedOn;
 	}
-
+	
 }

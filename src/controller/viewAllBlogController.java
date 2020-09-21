@@ -34,7 +34,7 @@ public class viewAllBlogController extends HttpServlet {
 		System.out.println("view all blogs");
 		System.out.println("Getting all blog post");
 		BlogDaoImpl blogDao = new BlogDaoImpl();
-		List<Blog> ListBlog = blogDao.selectALLBlogs();
+		List<Blog> ListBlog = blogDao.selectAllBlogs();
 		System.out.println(ListBlog);
 		for(Blog bloglist: ListBlog)
 		{

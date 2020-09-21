@@ -1,10 +1,12 @@
 package dao;
 
+//import javax.persistence.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
-
+//import org.hibernate.query.Query;
+import org.hibernate.Query;
 import model.User;
 import utility.HibernateConnectionManager;
 

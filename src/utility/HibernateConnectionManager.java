@@ -7,11 +7,12 @@ import org.hibernate.cfg.Configuration;
 public class HibernateConnectionManager {
 	private static SessionFactory sessionFactory = null;
 
+	@SuppressWarnings("deprecation")
 	public static SessionFactory getSessionFactory() throws HibernateException {
 	        if (sessionFactory == null) {
 	            Configuration con = new Configuration();
-	            con.configure("hibernate.cfg.xml");
-	            sessionFactory = con.buildSessionFactory();
+	           con.configure("hibernate.cfg.xml");
+	           sessionFactory=con.buildSessionFactory();
 	        }
 	        return sessionFactory;
 	    }
